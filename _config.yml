@@ -3,6 +3,8 @@ gems:
   - jekyll-archives # Sorry, not GitHub pages friendly!
 #   - jekyll-sitemap
 
+exclude: ['Gemfile', 'Gemfile.lock']
+
 # Site settings
 title: Brandon Cole
 subtitle: "A place to store my thoughts and share my experiences"
