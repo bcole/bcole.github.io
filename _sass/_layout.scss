@@ -205,6 +205,9 @@ pre code.hljs {
 		padding-top: 1em !important;
 		@extend %default-ul;
 	}
+	.post-link:hover {
+		text-decoration: none;
+	}
 	.post-meta {
 		@include outer-container;
 		// padding: 1em 0;
