@@ -6,8 +6,8 @@
 </description>
     <link>http://bcole.github.io/</link>
     <atom:link href="http://bcole.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Sep 2015 13:42:24 -0700</pubDate>
-    <lastBuildDate>Wed, 23 Sep 2015 13:42:24 -0700</lastBuildDate>
+    <pubDate>Wed, 23 Sep 2015 18:07:56 -0700</pubDate>
+    <lastBuildDate>Wed, 23 Sep 2015 18:07:56 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -46,7 +46,7 @@
 
 &lt;h4 id=&quot;jekyll-themes&quot;&gt;Jekyll Themes&lt;/h4&gt;
 
-&lt;p&gt;The default Jekyll theme is pretty clean, and very open to custom styling.  I decided to get inspired by other &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll themes&lt;/a&gt;, and used a different theme as a starting point.  &lt;a href=&quot;https://github.com/bencentra/centrarium&quot;&gt;Centrarium&lt;/a&gt;, by fellow RIT alumni &lt;a href=&quot;http://bencentra.com/&quot;&gt;Ben Centra&lt;/a&gt;, is the theme I am using for now and will probably continue to tweak and use.  Nice work Ben!&lt;/p&gt;
+&lt;p&gt;The default Jekyll theme is pretty clean, and very open to custom styling.  I decided to get inspired by other &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll themes&lt;/a&gt;, and used a different theme as a starting point.  &lt;a href=&quot;https://github.com/bencentra/centrarium&quot;&gt;Centrarium&lt;/a&gt;, by fellow RIT alumni &lt;a href=&quot;http://bencentra.com/&quot;&gt;Ben Centra&lt;/a&gt;, is the theme I am using for now and will probably continue to tweak and use.  Nice work, Ben!&lt;/p&gt;
 
 &lt;p&gt;He’s got some other cool technologies integrated with the theme, including &lt;a href=&quot;http://bourbon.io/&quot;&gt;Bourbon&lt;/a&gt; and &lt;a href=&quot;http://neat.bourbon.io/&quot;&gt;Neat&lt;/a&gt; styling, and a cool Jekyll plugin called &lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;jekyll-archives&lt;/a&gt;.  More on this and integration, next.&lt;/p&gt;
 
@@ -58,7 +58,7 @@
 
 &lt;p&gt;Ben’s inclusion of &lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;jekyll-archives&lt;/a&gt; is awesome, and provides many useful features such as improved tagging and page generation for tags and categories.  However, GitHub Pages uses their own safe-mode of &lt;code&gt;jekyll build&lt;/code&gt; that disables plugins.  Therefore, a simple push to my master branch on my GitHub repository would not generate the archive pages and was insufficient.  After much research, I’ve found a solution I can accept.&lt;/p&gt;
 
-&lt;p&gt;I’ve created a second branch called &lt;code&gt;development&lt;/code&gt; that I will use for my Jekyll files, templates, etc.  The Jekyll output, which goes to a folder called &lt;code&gt;_site&lt;/code&gt;, will be what lives in the &lt;code&gt;master&lt;/code&gt; branch of my repo, since GitHub Pages is happy serve already static pages (no &lt;code&gt;jekyll build&lt;/code&gt; needed).&lt;/p&gt;
+&lt;p&gt;I’ve created a second branch called &lt;code&gt;development&lt;/code&gt; that I will use for my Jekyll files, templates, etc.  The Jekyll output, which goes to a folder called &lt;code&gt;_site&lt;/code&gt;, will be what lives in the &lt;code&gt;master&lt;/code&gt; branch of my repo, since GitHub Pages is happy to serve already static pages (no &lt;code&gt;jekyll build&lt;/code&gt; needed).&lt;/p&gt;
 
 &lt;p&gt;Here’s how development looks on my local machine.&lt;/p&gt;
 
@@ -73,7 +73,7 @@
 
 &lt;p&gt;My development folder points strictly to the &lt;code&gt;development&lt;/code&gt; branch, and master simply to the &lt;code&gt;master&lt;/code&gt; branch.  I do all my work on the development branch.  When I’m ready to push something new to master, I do a &lt;code&gt;jekyll build&lt;/code&gt; and copy the contents of &lt;code&gt;_site&lt;/code&gt; in development to master.&lt;/p&gt;
 
-&lt;p&gt;To simplify this deploy process, I’ve written a simple shell script.  You can [check it out][deploy-script] on this site’s repository.  After tweaking the site or adding a new post, I can verify it via &lt;code&gt;jekyll serve&lt;/code&gt; in the development folder, and when I’m sure things look good, I execute a simple &lt;code&gt;./_deploy.sh&lt;/code&gt; to push to master and to &lt;a href=&quot;/&quot;&gt;bcole.github.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To simplify this deploy process, I’ve written a simple shell script.  You can &lt;a href=&quot;https://github.com/bcole/bcole.github.io/blob/development/_deploy.sh&quot;&gt;check it out&lt;/a&gt; on this site’s repository.  After tweaking the site or adding a new post, I can verify it via &lt;code&gt;jekyll serve&lt;/code&gt; in the development folder, and when I’m sure things look good, I execute a simple &lt;code&gt;./_deploy.sh&lt;/code&gt; to push to master and to &lt;a href=&quot;/&quot;&gt;bcole.github.io&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h3&gt;
 

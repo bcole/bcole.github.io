@@ -171,7 +171,7 @@
 
 <h4 id="jekyll-themes">Jekyll Themes</h4>
 
-<p>The default Jekyll theme is pretty clean, and very open to custom styling.  I decided to get inspired by other <a href="http://jekyllthemes.org/">Jekyll themes</a>, and used a different theme as a starting point.  <a href="https://github.com/bencentra/centrarium">Centrarium</a>, by fellow RIT alumni <a href="http://bencentra.com/">Ben Centra</a>, is the theme I am using for now and will probably continue to tweak and use.  Nice work Ben!</p>
+<p>The default Jekyll theme is pretty clean, and very open to custom styling.  I decided to get inspired by other <a href="http://jekyllthemes.org/">Jekyll themes</a>, and used a different theme as a starting point.  <a href="https://github.com/bencentra/centrarium">Centrarium</a>, by fellow RIT alumni <a href="http://bencentra.com/">Ben Centra</a>, is the theme I am using for now and will probably continue to tweak and use.  Nice work, Ben!</p>
 
 <p>He’s got some other cool technologies integrated with the theme, including <a href="http://bourbon.io/">Bourbon</a> and <a href="http://neat.bourbon.io/">Neat</a> styling, and a cool Jekyll plugin called <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a>.  More on this and integration, next.</p>
 
@@ -183,7 +183,7 @@
 
 <p>Ben’s inclusion of <a href="https://github.com/jekyll/jekyll-archives">jekyll-archives</a> is awesome, and provides many useful features such as improved tagging and page generation for tags and categories.  However, GitHub Pages uses their own safe-mode of <code>jekyll build</code> that disables plugins.  Therefore, a simple push to my master branch on my GitHub repository would not generate the archive pages and was insufficient.  After much research, I’ve found a solution I can accept.</p>
 
-<p>I’ve created a second branch called <code>development</code> that I will use for my Jekyll files, templates, etc.  The Jekyll output, which goes to a folder called <code>_site</code>, will be what lives in the <code>master</code> branch of my repo, since GitHub Pages is happy serve already static pages (no <code>jekyll build</code> needed).</p>
+<p>I’ve created a second branch called <code>development</code> that I will use for my Jekyll files, templates, etc.  The Jekyll output, which goes to a folder called <code>_site</code>, will be what lives in the <code>master</code> branch of my repo, since GitHub Pages is happy to serve already static pages (no <code>jekyll build</code> needed).</p>
 
 <p>Here’s how development looks on my local machine.</p>
 
@@ -198,7 +198,7 @@
 
 <p>My development folder points strictly to the <code>development</code> branch, and master simply to the <code>master</code> branch.  I do all my work on the development branch.  When I’m ready to push something new to master, I do a <code>jekyll build</code> and copy the contents of <code>_site</code> in development to master.</p>
 
-<p>To simplify this deploy process, I’ve written a simple shell script.  You can [check it out][deploy-script] on this site’s repository.  After tweaking the site or adding a new post, I can verify it via <code>jekyll serve</code> in the development folder, and when I’m sure things look good, I execute a simple <code>./_deploy.sh</code> to push to master and to <a href="/">bcole.github.io</a>.</p>
+<p>To simplify this deploy process, I’ve written a simple shell script.  You can <a href="https://github.com/bcole/bcole.github.io/blob/development/_deploy.sh">check it out</a> on this site’s repository.  After tweaking the site or adding a new post, I can verify it via <code>jekyll serve</code> in the development folder, and when I’m sure things look good, I execute a simple <code>./_deploy.sh</code> to push to master and to <a href="/">bcole.github.io</a>.</p>
 
 <h3 id="final-thoughts">Final Thoughts</h3>
 

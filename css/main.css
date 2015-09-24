@@ -401,6 +401,8 @@ pre code.hljs {
       display: table; }
   .page-content .post-list {
     padding-top: 1em !important; }
+  .page-content .post-link:hover {
+    text-decoration: none; }
   .page-content .post-meta {
     max-width: 48em;
     margin-left: auto;
