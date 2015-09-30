@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>E2E Testing Strategy</title>
+  <meta name="description" content="More tests!  More tests are always better, right?  Let’s reconsider, before answering that.">
+  
+  <meta name="author" content="Brandon Cole">
+  <meta name="copyright" content="&copy; Brandon Cole 2015">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/assets/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Facebook OGP cards -->
+  <meta property="og:description" content="More tests!  More tests are always better, right?  Let’s reconsider, before answering that." />
+  <meta property="og:url" content="http://bcole.github.io" />
+  <meta property="og:site_name" content="Brandon Cole" />
+  <meta property="og:title" content="E2E Testing Strategy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://bcole.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="E2E Testing Strategy">
+  <meta name="twitter:description" content="More tests!  More tests are always better, right?  Let’s reconsider, before answering that.">
+  <meta name="twitter:image" content="http://bcole.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://bcole.github.io">
+
+  
+
+	<!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bcole.github.io/testing/2015/09/29/e2e-testing-strategy.html">
+  <link rel="alternate" type="application/rss+xml" title="Brandon Cole" href="http://bcole.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+    	
+      <img src="/assets/logo.png" alt="Brandon Cole">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+    	<i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+      	
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+          <li class="nav-link"><a href="/typography/">Typography</a>
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+	<div class="scrim ">
+		<header class="post-header">
+		  <h1 class="title">E2E Testing Strategy</h1>
+		  <p class="info">by <strong>Brandon Cole</strong></p>
+		</header>
+	</div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+	<div class="post-date">September 29, 2015</div>
+	<div class="post-categories">
+	in 
+	  
+		<a href="/category/testing">Testing</a>
+	  
+	
+	</div>
+</section>	
+
+<article class="post-content">
+  <p>More tests!  More tests are always better, right?  Let’s reconsider, before answering that.</p>
+
+<p>Recently, I have been given responsibilities related to end-to-end (E2E) testing for a web application.  The web application is primarily written in <a href="https://angularjs.org/">AngularJS</a>, and I am using the <a href="https://angular.github.io/protractor/#/">Protractor</a> testing framework provided by the Angular team to write my tests.</p>
+
+<p>Now, I come from a testing background of low-level tests.  Unit tests, integration tests, service tests.  I’m new to UI and E2E tests.  When I write unit tests, I write unit tests.  I test positive and negative flows, I try to hit all boundary and edge cases, and so on.  Same for service tests.  And so, when it came time for me to write E2E tests, it made sense to follow that mindset.</p>
+
+<p>I tried testing every possible permutation of user experience options I could think of, positive flows and the more unlikely negative flows.  The number of permutations grew very, very quickly; multiplying as I found a new option that the user could try.  I was testing a relatively minor feature, and I quickly realized how unmaintainable this was becoming.</p>
+
+<p>Not only did this stress me out trying to properly set up a test suite of this size, but I was realizing a number of other side effects.</p>
+
+<p><strong>1) Tests had to be frequently maintained.</strong></p>
+
+<p>My tests had to, of course, make assertions to validate what should be displayed on the screen.  I abstracted out assertion values into test data files, so that as I was testing different environments (QA, Prod) or regions (US, UK), it was “easy” to make changes that reflect the given test.</p>
+
+<p>However, assertions were failing far more often than I expected.  Marketing would change a price value on the screen, experience designers would change the wording of a page, or database tables would simply change over time (as data tends to do in a web app!).</p>
+
+<p><em>Changes that didn’t impact the user experience flow were causing my tests to break.</em></p>
+
+<p>The test data would constantly have to be maintained to account for the web application’s ever-changing state.</p>
+
+<p><strong>2) Tests were becoming brittle.</strong></p>
+
+<p>Besides the changing state of the web application causing tests to fail, user interface tests present some challenges of their own.  There are often additional race conditions or timeout considerations that need to be carefully mitigated in the test to prevent intermittent test failures.</p>
+
+<p><em>Tests that fail intermittently are useless.</em></p>
+
+<p>You and any team members will start ignoring failed tests, thinking it’s another false positive (and perhaps it is).  A failed test should be taken seriously, and a testing strategy that does not foster that attitude is not benefiting you.</p>
+
+<p><strong>3) Test execution times were too long.</strong></p>
+
+<p>A test suite that takes too long to execute will not be run frequently.  Code ends up being checked in without thorough testing.</p>
+
+<p>All of these side effects, and more, were hindering our team’s ability to produce quality software.</p>
+
+<p>So what <strong><em>should</em></strong> we do?  I’m glad you asked.</p>
+
+<h3 id="the-testing-pyramid">The Testing Pyramid</h3>
+
+<p><img src="/assets/test-pyramid.png" alt="Testing Pyramid" /></p>
+
+<p><a href="http://martinfowler.com/bliki/TestPyramid.html">Martin Fowler</a> discusses a concept called the Testing Pyramid.  Essentially, there should be more unit tests than service or integration tests, and more of those than UI or E2E tests.</p>
+
+<p>He mentions the anti-pattern for this, comically referred to as the <a href="http://watirmelon.com/2012/01/31/introducing-the-software-testing-ice-cream-cone/">Ice Cream Cone</a> anti-pattern.</p>
+
+<p><img src="/assets/ice-cream-anti-pattern.png" alt="Ice Cream Cone anti-pattern" style="max-width: 520px" /></p>
+
+<p>The <a href="http://watirmelon.com/2012/01/31/introducing-the-software-testing-ice-cream-cone/">Ice Cream Cone anti-pattern</a>, which is what I was striving for as I naively took on my E2E testing responsibilities, causes the exact problems outlined above.</p>
+
+<h3 id="the-strategy">The Strategy</h3>
+
+<p>As tempting as it is, avoid the Ice Cream Cone!  Here’s what I suggest.</p>
+
+<p>Keep E2E tests focused on the core flows of your application that your users will engage in.  Don’t test for specific content, like text or images.  These can change frequently.  Instead, test for more static items.  Test buttons and links and ensure their behavior is as expected.</p>
+
+<p>Save your animal-like instincts of software quality with wild test permutations for the lower-level unit and service tests.  It’s much easier to test a wide set of test inputs at the unit level.  Unit tests aren’t dependent on the state of the web application or what is in the database.</p>
+
+<p>One final benefit I’ll briefly mention is discussed in detail in a <a href="http://googletesting.blogspot.co.uk/2015/04/just-say-no-to-more-end-to-end-tests.html">recent blog post</a> from the Google testing blog.  Taking a step back, what is the point of testing?  To find bugs!  If a high level E2E test fails, it could be caused by any number of problems.  Isolating the buggy code can be quite difficult if a bug is found in an E2E test.  Conversely, a unit test failure isolates the possible buggy code to a much smaller scope.  It is much easier to resolve the bug.</p>
+
+<h3 id="so-is-more-testing-always-better">So, is more testing always better?!</h3>
+
+<p>That was a trick question, wasn’t it?</p>
+
+<p>Writing the right kind of tests is what’s important.  Write more unit tests, and limit your end-to-end tests.</p>
+
+<h3 id="read-more">Read More!</h3>
+
+<p>Please, don’t just take my suggestions without further thought.  There is a large amount of information surfacing, especially recently, on best practices for testing.</p>
+
+<p>I highly suggest reading <a href="http://googletesting.blogspot.co.uk/2015/04/just-say-no-to-more-end-to-end-tests.html">Google’s recent blog post</a> on E2E testing.  It’s a bit lengthy but it’s worthwhile.</p>
+
+<p>Martin Fowler’s post on the <a href="http://martinfowler.com/bliki/TestPyramid.html">Test Pyramid</a> is great as well (and it’s a quick read!).</p>
+
+<p>Let me know if you have any experiences of your own you’d like to share!</p>
+
+
+</article>
+
+
+
+<section class="tags">
+	<strong>Tags:</strong> <a href="/tag/testing">testing</a>,&nbsp;<a href="/tag/e2e">e2e</a>,&nbsp;<a href="/tag/automated">automated</a>
+</section>
+
+
+
+<section class="rss">
+	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+  
+    
+      <a href="//www.facebook.com/sharer.php?t=E2E+Testing+Strategy&amp;u=http://bcole.github.io/testing/2015/09/29/e2e-testing-strategy.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="http://twitter.com/share?text=E2E+Testing+Strategy&amp;url=http://bcole.github.io/testing/2015/09/29/e2e-testing-strategy.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//www.linkedin.com/shareArticle?mini=trueE2E+Testing+Strategy&amp;url=http://bcole.github.io/testing/2015/09/29/e2e-testing-strategy.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//plus.google.com/share?title=E2E+Testing+Strategy&amp;url=http://bcole.github.io/testing/2015/09/29/e2e-testing-strategy.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</section>
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'bcole';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Brandon Cole</h3>
+
+    <div class="site-contact">
+
+    	<p><strong>Contact</strong></p>
+
+      <div class="left">
+      <ul class="social-media-list">
+      	<li>
+      		<a href="mailto:bncole333@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">bncole333@gmail.com</span>
+      		</a>
+      	</li>
+
+        
+        
+        
+        
+        <li>
+          <a href="https://github.com/bcole" title="Fork me on GitHub">
+            <i class="fa fa-github"></i>
+            <span class="username">bcole</span>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+      </div>
+
+      <div class="right">
+      <ul class="social-media-list">
+
+        
+      	
+      	
+        
+        
+      	
+      	
+        
+      	<li>
+          <a href="http://facebook.com/BNCole" title="Friend me on Facebook">
+            <i class="fa fa-facebook"></i>
+            <span class="username">BNCole</span>
+          </a>
+        </li>
+      	
+        
+      	
+      	
+      	
+      	
+        
+      	<li>
+          <a href="https://www.linkedin.com/pub/brandon-cole/23/902/111" title="Connect with me on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">Brandon Cole</span>
+          </a>
+        </li>
+      	
+        
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+
+      </ul>
+      </div>
+    </div>
+
+    <div class="site-signature">
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"><i>"Muddy water is best cleared by leaving it alone."</i> - <a href="https://www.youtube.com/watch?v=emHAoQGoQic" target="_BLANK">Alan Watts</a>
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>
