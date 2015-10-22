@@ -16,7 +16,7 @@ Adventure is a part of my DNA.  The <a href="{{ site.baseurl }}/assets/header_im
 
 **Why did I make this blog?**
 
-You can read my [introduction blog post]({% post_url 2015-09-23-blog-init %}) for my reasoning behind starting this blog.  Overall, though, I hope to keep this an exciting a fun place while also sharing my professional learnings and thoughts.
+You can read my [introduction blog post]({% post_url 2015-09-23-blog-init %}) for my reasoning behind starting this blog.  Overall, though, I hope to keep this an exciting and fun place while also sharing my professional learnings and thoughts.
 
 **What am I doing with my life right now?**
 
