@@ -78,7 +78,7 @@ CSS files should be named according to component, not based on the page!
 <pre><code class="md">.
 ├── styles
 |   ├── homePage.css
-|   └── aboutPage.css
+|   ├── aboutPage.css
 |   ├── contactPage.css
 |   ├── ...
 </code></pre>
@@ -87,7 +87,7 @@ CSS files should be named according to component, not based on the page!
 <pre><code class="md">.
 ├── styles
 |   ├── alerts.css
-|   └── buttons.css
+|   ├── buttons.css
 |   ├── forms.css
 |   ├── ...
 </code></pre>
@@ -175,6 +175,8 @@ Human translators can recognize context better.  You can use outsourcing sites l
 Care needs to be taken to not simply translate the entire website.  Certain content, such as URLs or code snippets, should often not be translated.
 
 The approach suggested in this talk solved this by abstracting strings out.  Then, at the presentation level, strings were wrapped with a Javascript <code>_t(string)</code> function call that took care of the translation.  This forces the translation to be more explicit.
+
+*Note: the <code>_t()</code> function is specific to the custom translation library Coursera created.  View the [slide deck](https://eleith.com/slides/automate-i18n/) for more information on their approach.*
 
 ---
 
