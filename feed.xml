@@ -6,9 +6,270 @@
 </description>
     <link>http://bcole.github.io/</link>
     <atom:link href="http://bcole.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 30 Sep 2015 02:16:06 -0700</pubDate>
-    <lastBuildDate>Wed, 30 Sep 2015 02:16:06 -0700</lastBuildDate>
+    <pubDate>Thu, 22 Oct 2015 01:43:18 -0700</pubDate>
+    <lastBuildDate>Thu, 22 Oct 2015 01:43:18 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>HTML5 Developer Conference</title>
+        <description>&lt;p&gt;This week, I was lucky to be able to attend the &lt;a href=&quot;http://html5devconf.com/&quot;&gt;HTML5 Developer Conference&lt;/a&gt; in San Francisco.  Here’s a few takeaways that I’d like to share!&lt;/p&gt;
+
+&lt;h3 id=&quot;module-based-design&quot;&gt;Module Based Design&lt;/h3&gt;
+
+&lt;p&gt;This was probably my favorite talk of the day.  It focused on best practices for design of modern web applications and utilizing reusable components.&lt;/p&gt;
+
+&lt;p&gt;The full talk is titled &lt;a href=&quot;http://html5devconf.com/speakers/mike_kivikoski.html#session&quot;&gt;Evolving Web Applications with Module Based Design Components&lt;/a&gt; and was given by &lt;a href=&quot;http://www.mikekivikoski.com/&quot;&gt;Mike Kivikoski&lt;/a&gt;, a Designer and Developer at &lt;a href=&quot;http://cantina.co/&quot;&gt;Cantina&lt;/a&gt; in Boston.&lt;/p&gt;
+
+&lt;p&gt;He started out with some examples of good module based design, like Netflix.  Netflix has a standardized widget to display a list of TV shows or movies, and it is reused in multiple places across the site.  The important thing to note is the consistency.&lt;/p&gt;
+
+&lt;p&gt;However, it is not enough to simply have a consistent UI.  It should also be maintainable.&lt;/p&gt;
+
+&lt;p&gt;He gave an example of an airline site which he enjoyed using.  The buttons and styles were consistent.  However, he looked into the source code and noticed that different classes were being used for titles that had the same exact styling.  This is bad!  It means that if a change wants to be made (ex: change the title font size), this has to be changed in every CSS class used by titles.  This violates the &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY principle&lt;/a&gt; (don’t repeat yourself!), and it’s not maintainable!&lt;/p&gt;
+
+&lt;p&gt;He ended with an example of an even worse site, where there wasn’t even consistency.  Buttons looked different, forms had different styling, and so on.  This is an obvious no-no.&lt;/p&gt;
+
+&lt;p&gt;But back to the good design.  What should we do?&lt;/p&gt;
+
+&lt;h4 id=&quot;good-design---tips--tricks&quot;&gt;Good Design - Tips &amp;amp; Tricks&lt;/h4&gt;
+
+&lt;p&gt;Mike gave a &lt;em&gt;lot&lt;/em&gt; of tips &amp;amp; tricks in this talk to keep in mind while designing your CSS and website.  I’ll pull out a few that I especially thought were useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Use CSS classes, not IDs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Classes are reusable, and this approach helps promote a component based design and dissuades styling for “one-off’s” (more on this later).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) CSS classes should do one thing and do it well&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Creating monolith classes that do everything you need in one shot may seem simple at first, but it’s not a good approach.  Again, this will impede our desire to have reusable CSS classes.&lt;/p&gt;
+
+&lt;p&gt;As an example, consider a sandwich.  It would be poor design to just create a sandwich style, as this isn’t very reusable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/html5devconf/single-responsibility-principle-1.jpg&quot; alt=&quot;Single Responsibility Principle (bad)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead, we want smaller components that are responsible for one piece of the design.  They should do one thing, and do it well!&lt;/p&gt;
+
+&lt;p&gt;Here’s a better approach:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/html5devconf/single-responsibility-principle-2.jpg&quot; alt=&quot;Single Responsibility Principle (good)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you think about it, this isn’t really anything brand-new for software design.  Cohesive design is a practice across all software development.  However, I think it can be overlooked when it comes to CSS design.  I hadn’t really given this idea too much thought before Mike’s talk.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) Don’t make one-off changes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When marketing comes with a new requirement, don’t create the CSS class &lt;code&gt;.headline-one-with-top-margin-for-marketing&lt;/code&gt;.  Create components!&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;.headline-one&lt;/code&gt;, &lt;code&gt;.top-margin&lt;/code&gt;, and &lt;code&gt;.marketing&lt;/code&gt; (if required) are the classes you should create instead.&lt;/p&gt;
+
+&lt;p&gt;This is really just another reiteration of following the &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY principle&lt;/a&gt; and will make for a maintainable design.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) Use variables, and name variables appropriately&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A good example is colors; don’t hardcode color values in your classes.  And when assigning colors to a variable, take care to name the variable appropriately.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;@gray&lt;/code&gt;, &lt;code&gt;@dark-gray&lt;/code&gt;, &lt;code&gt;@extra-dark-gray&lt;/code&gt;, &lt;code&gt;@super-extra-dark-gray&lt;/code&gt;, and so on.. is unrealistic.  Use a number scheme instead.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;@gray-100&lt;/code&gt;, &lt;code&gt;@gray-200&lt;/code&gt;, &lt;code&gt;@gray-300&lt;/code&gt;, …, &lt;code&gt;@gray-900&lt;/code&gt;, this is a much better approach (and follows the font-weight standard).&lt;/p&gt;
+
+&lt;p&gt;You could also do this for colors that you don’t want to explicitly name.  Example: &lt;code&gt;@primary-100&lt;/code&gt;, &lt;code&gt;@primary-200&lt;/code&gt;, &lt;code&gt;@primary-300&lt;/code&gt;, and so on for your primary theme color.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) CSS file organization&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;CSS files should be named according to component, not based on the page!&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Bad example:&lt;/u&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;md&quot;&gt;.
+├── styles
+|   ├── homePage.css
+|   ├── aboutPage.css
+|   ├── contactPage.css
+|   ├── ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;u&gt;Good example:&lt;/u&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;md&quot;&gt;.
+├── styles
+|   ├── alerts.css
+|   ├── buttons.css
+|   ├── forms.css
+|   ├── ...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will help enforce that reusable component based design that we’ve been talking about.  Organizing based on location makes it much harder to reuse that style in another part of the site.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;6) Code Reviews&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Mike finished off the talk with tips on how to be more successful as a team.&lt;/p&gt;
+
+&lt;p&gt;Code reviews are a must, even for styles.  A few things this can help with:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Check that variables are used (appropriately).&lt;/li&gt;
+  &lt;li&gt;Check syntax, and check that naming standards are used and code is consistent.&lt;/li&gt;
+  &lt;li&gt;Check that components are reusable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;7) Style Guides&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Documentation is normally not the most enjoyed part of a developer’s life, but it is crucial!&lt;/p&gt;
+
+&lt;p&gt;In the case of module based design, it can clearly show the rest of your team the components that are available for use.&lt;/p&gt;
+
+&lt;p&gt;There are plenty of tools that will help generate these style guides for you:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://warpspire.com/kss/&quot;&gt;KSS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://patternlab.io/&quot;&gt;Pattern Lab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fbrctr.github.io/&quot;&gt;Fabricator&lt;/a&gt; - and here’s a &lt;a href=&quot;http://fbrctr.github.io/demo/&quot;&gt;demo&lt;/a&gt; of a style guide&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;He also mentions not to let this style guide die.  Keep it up-to-date and let it evolve!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;One final topic I want to discuss on this talk is &lt;strong&gt;testing&lt;/strong&gt;.  I had a concern while hearing this talk that by putting styles into reused classes, testing could become a pain.  If you want to change the style of some text on the homepage, you go and change the style.  But then what if that style is reused, and some other page breaks?&lt;/p&gt;
+
+&lt;p&gt;Apparently, I wasn’t the only one with that concern, as it was brought up during Q&amp;amp;A.  Mike’s answer was two-fold.  First, he admitted that of course some regression testing will have to be done to ensure that the change isn’t breaking other parts of the site.  The other point he brought up is that the benefit of this module based design is that &lt;em&gt;components “play well” together&lt;/em&gt;.  Components should be compatible with other components (without breaking).&lt;/p&gt;
+
+&lt;p&gt;In other words, it shouldn’t be possible that changing a component’s style and testing it on the homepage would work, but would break on another part of the site.  This all relates back to his point about avoiding one-off changes as well, as you can better prevent odd edge cases that happen only on certain pages.&lt;/p&gt;
+
+&lt;p&gt;So, take that with a grain of salt.  A perfect implementation of module based design wouldn’t introduce this sort of bug, but things don’t always execute perfectly, do they? ;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This was a very potent talk with a lot of content, but I hope I summarized out the core points on this one!&lt;/p&gt;
+
+&lt;h3 id=&quot;localization&quot;&gt;Localization&lt;/h3&gt;
+
+&lt;p&gt;I actually had no idea what this talk would be about, based on it’s title: &lt;a href=&quot;http://html5devconf.com/speakers/leith_abdulla.html#session&quot;&gt;How Automation Can Open Up Your Product to a Billion More Users*&lt;/a&gt;.  The asterisk ended up signifying:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;* if you localize all the languages …&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The full slide deck is available here: &lt;a href=&quot;https://eleith.com/slides/automate-i18n/&quot;&gt;https://eleith.com/slides/automate-i18n/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some of the core points I took out of this talk:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) How to determine the user’s language&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This can be difficult, and depends on the specific situation.  In general, use a combination of strategies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;User’s preference data (if the user is logged in).&lt;/li&gt;
+  &lt;li&gt;The &lt;code&gt;Accept-Language&lt;/code&gt; header in the request (this is based on browser preferences).&lt;/li&gt;
+  &lt;li&gt;IP-based (using a service like &lt;a href=&quot;https://www.maxmind.com&quot;&gt;MaxMind&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Google was given as an example of a good experience.  You can travel to Japan, the site would load in Japanese, but Google would offer a message saying “we think you might prefer to read this in English.”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) How to broadcast the language support&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is important to help ensure that user is given appropriate content.  It can also help search engines pick the right results.&lt;/p&gt;
+
+&lt;p&gt;Use the HTML standard (&lt;code&gt;&amp;lt;html lang=&quot;en&quot;&amp;gt;&lt;/code&gt;) or use subdomains:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;es.coursera.org&lt;/li&gt;
+  &lt;li&gt;zh.coursera.org&lt;/li&gt;
+  &lt;li&gt;pt.coursera.org&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;3) Translation concerns&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There’s more to consider than simply translating words.  For example, the English word “back” could be translated to the meaning “previous”, or to the part of the human body.  Context is important.&lt;/p&gt;
+
+&lt;p&gt;Format can also change.  For example, dates, times and numbers (like the thousands separator), may all need to be presented in different ways depending on the locale.&lt;/p&gt;
+
+&lt;p&gt;Solving this depends on the importance of quality.  Automated translation services, like Google Translate, are improving over time.  But they still aren’t perfect.  If high quality translation content is necessary, it might be more appropriate to use a more manual process.&lt;/p&gt;
+
+&lt;p&gt;Human translators can recognize context better.  You can use outsourcing sites like &lt;a href=&quot;https://www.mturk.com/mturk/welcome&quot;&gt;Amazon’s Mechanical Turk&lt;/a&gt; for this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) Not all site content should be translated&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Care needs to be taken to not simply translate the entire website.  Certain content, such as URLs or code snippets, should often not be translated.&lt;/p&gt;
+
+&lt;p&gt;The approach suggested in this talk solved this by abstracting strings out.  Then, at the presentation level, strings were wrapped with a Javascript &lt;code&gt;_t(string)&lt;/code&gt; function call that took care of the translation.  This forces the translation to be more explicit.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: the &lt;code&gt;_t()&lt;/code&gt; function is specific to the custom translation library Coursera created.  View the &lt;a href=&quot;https://eleith.com/slides/automate-i18n/&quot;&gt;slide deck&lt;/a&gt; for more information on their approach.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Localization is important on the internet.  Simply looking at English vs non-English speakers on the internet shows this importance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/html5devconf/english-vs-non-english.png&quot; alt=&quot;English vs. non-English speakers&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;drunk-user-testing&quot;&gt;Drunk User Testing&lt;/h3&gt;
+
+&lt;p&gt;This was definitely one of the most fun talks of the day!  But before you get too excited - No, we didn’t get drunk for this one :(&lt;/p&gt;
+
+&lt;p&gt;The idea behind this type of testing is that (1) your site is simple enough that a drunk user can use it, and (2) drunk users will give more honest feedback.&lt;/p&gt;
+
+&lt;p&gt;There’s actually a website called &lt;a href=&quot;http://theuserisdrunk.com/&quot;&gt;theuserisdrunk.com&lt;/a&gt;, where a UX professional says he will get drunk and test your website while recording the session and providing a full feedback document.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://austinknight.com/drunk-speech-resources/&quot;&gt;Austin Knight&lt;/a&gt; was the presenter for this talk, and he works for &lt;a href=&quot;http://www.hubspot.com/&quot;&gt;HubSpot&lt;/a&gt;.  HubSpot used this service on their homepage and got some valuable feedback.  The screencast video is recorded below - it’s actually quite an entertaining video if you have some time!&lt;/p&gt;
+
+&lt;iframe style=&quot;max-width:100%&quot; width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/osr0rPUyAbY&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Austin spent the rest of the talk discussing the possibility of user testing with sober users.&lt;/p&gt;
+
+&lt;h4 id=&quot;challenges&quot;&gt;Challenges&lt;/h4&gt;
+
+&lt;p&gt;There are challenges to consider when setting up user tests.  Often times during user testing, users will give opinions even if they wouldn’t normally have one.  They end up thinking of an opinion to give instead of fully using the product.  This is unnatural.  In addition, feedback can be skewed if questions are leading.&lt;/p&gt;
+
+&lt;h4 id=&quot;solutions&quot;&gt;Solutions&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Segment your users&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Ask “qualifying questions” that help you ensure that your users who you are testing are in fact your target audience.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) Iterate the tests&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Start with a pilot test that will “test the test.”  This will let you identify any flaws in the test before running it against actual users.&lt;/p&gt;
+
+&lt;p&gt;Then run tests in iterations.  Each iteration really only needs 3-5 users, according to Austin.  Continue this iteration cycle.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) Don’t lead the user&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is important to ask questions that don’t exactly match the implementation.&lt;/p&gt;
+
+&lt;p&gt;Consider these two prompts.  Which is the better phrasing?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“Find the job application form and submit it”&lt;/li&gt;
+  &lt;li&gt;“Find a job you like and apply for it”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first prompt leads the user by referring to specific implementation terminology (a “form”, a “submit” button).  Asking for behavior is preferred, and will help induce a more natural environment.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) Create a culture of UX at your company&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Everyone is a UX designer.  There should be a sense of ownership from everyone, and the mindset of “oh, it’s that guy’s fault, not mine” shouldn’t exist.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;By following these tips, it is possible to get valuable feedback from every user (not just drunk ones)!&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 21 Oct 2015 16:12:19 -0700</pubDate>
+        <link>http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html</link>
+        <guid isPermaLink="true">http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html</guid>
+        
+        <category>html</category>
+        
+        <category>css</category>
+        
+        <category>conference</category>
+        
+        <category>notes</category>
+        
+        <category>design</category>
+        
+        <category>advice</category>
+        
+        
+        <category>conferences</category>
+        
+      </item>
     
       <item>
         <title>E2E Testing Strategy</title>

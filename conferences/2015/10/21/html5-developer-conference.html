@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML5 Developer Conference</title>
+  <meta name="description" content="This week, I was lucky to be able to attend the HTML5 Developer Conference in San Francisco.  Here’s a few takeaways that I’d like to share!">
+  
+  <meta name="author" content="Brandon Cole">
+  <meta name="copyright" content="&copy; Brandon Cole 2015">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/assets/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Facebook OGP cards -->
+  <meta property="og:description" content="This week, I was lucky to be able to attend the HTML5 Developer Conference in San Francisco.  Here’s a few takeaways that I’d like to share!" />
+  <meta property="og:url" content="http://bcole.github.io" />
+  <meta property="og:site_name" content="Brandon Cole" />
+  <meta property="og:title" content="HTML5 Developer Conference" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://bcole.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HTML5 Developer Conference">
+  <meta name="twitter:description" content="This week, I was lucky to be able to attend the HTML5 Developer Conference in San Francisco.  Here’s a few takeaways that I’d like to share!">
+  <meta name="twitter:image" content="http://bcole.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://bcole.github.io">
+
+  
+
+	<!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html">
+  <link rel="alternate" type="application/rss+xml" title="Brandon Cole" href="http://bcole.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+    	
+      <img src="/assets/logo.png" alt="Brandon Cole">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+    	<i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+      	
+          
+          <li class="nav-link"><a href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Posts</a>
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container has-cover" style="background-image: url(/assets/images/html5devconf/cover.png);">
+	<div class="scrim has-cover">
+		<header class="post-header">
+		  <h1 class="title">HTML5 Developer Conference</h1>
+		  <p class="info">by <strong>Brandon Cole</strong></p>
+		</header>
+	</div>
+</div>
+
+<div class="wrapper">
+
+
+
+<section class="post-meta">
+	<div class="post-date">October 21, 2015</div>
+	<div class="post-categories">
+	in 
+	  
+		<a href="/category/conferences">Conferences</a>
+	  
+	
+	</div>
+</section>	
+
+<article class="post-content">
+  <p>This week, I was lucky to be able to attend the <a href="http://html5devconf.com/">HTML5 Developer Conference</a> in San Francisco.  Here’s a few takeaways that I’d like to share!</p>
+
+<h3 id="module-based-design">Module Based Design</h3>
+
+<p>This was probably my favorite talk of the day.  It focused on best practices for design of modern web applications and utilizing reusable components.</p>
+
+<p>The full talk is titled <a href="http://html5devconf.com/speakers/mike_kivikoski.html#session">Evolving Web Applications with Module Based Design Components</a> and was given by <a href="http://www.mikekivikoski.com/">Mike Kivikoski</a>, a Designer and Developer at <a href="http://cantina.co/">Cantina</a> in Boston.</p>
+
+<p>He started out with some examples of good module based design, like Netflix.  Netflix has a standardized widget to display a list of TV shows or movies, and it is reused in multiple places across the site.  The important thing to note is the consistency.</p>
+
+<p>However, it is not enough to simply have a consistent UI.  It should also be maintainable.</p>
+
+<p>He gave an example of an airline site which he enjoyed using.  The buttons and styles were consistent.  However, he looked into the source code and noticed that different classes were being used for titles that had the same exact styling.  This is bad!  It means that if a change wants to be made (ex: change the title font size), this has to be changed in every CSS class used by titles.  This violates the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a> (don’t repeat yourself!), and it’s not maintainable!</p>
+
+<p>He ended with an example of an even worse site, where there wasn’t even consistency.  Buttons looked different, forms had different styling, and so on.  This is an obvious no-no.</p>
+
+<p>But back to the good design.  What should we do?</p>
+
+<h4 id="good-design---tips--tricks">Good Design - Tips &amp; Tricks</h4>
+
+<p>Mike gave a <em>lot</em> of tips &amp; tricks in this talk to keep in mind while designing your CSS and website.  I’ll pull out a few that I especially thought were useful.</p>
+
+<p><strong>1) Use CSS classes, not IDs</strong></p>
+
+<p>Classes are reusable, and this approach helps promote a component based design and dissuades styling for “one-off’s” (more on this later).</p>
+
+<p><strong>2) CSS classes should do one thing and do it well</strong></p>
+
+<p>Creating monolith classes that do everything you need in one shot may seem simple at first, but it’s not a good approach.  Again, this will impede our desire to have reusable CSS classes.</p>
+
+<p>As an example, consider a sandwich.  It would be poor design to just create a sandwich style, as this isn’t very reusable.</p>
+
+<p><img src="/assets/images/html5devconf/single-responsibility-principle-1.jpg" alt="Single Responsibility Principle (bad)" /></p>
+
+<p>Instead, we want smaller components that are responsible for one piece of the design.  They should do one thing, and do it well!</p>
+
+<p>Here’s a better approach:</p>
+
+<p><img src="/assets/images/html5devconf/single-responsibility-principle-2.jpg" alt="Single Responsibility Principle (good)" /></p>
+
+<p>If you think about it, this isn’t really anything brand-new for software design.  Cohesive design is a practice across all software development.  However, I think it can be overlooked when it comes to CSS design.  I hadn’t really given this idea too much thought before Mike’s talk.</p>
+
+<p><strong>3) Don’t make one-off changes</strong></p>
+
+<p>When marketing comes with a new requirement, don’t create the CSS class <code>.headline-one-with-top-margin-for-marketing</code>.  Create components!</p>
+
+<p><code>.headline-one</code>, <code>.top-margin</code>, and <code>.marketing</code> (if required) are the classes you should create instead.</p>
+
+<p>This is really just another reiteration of following the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a> and will make for a maintainable design.</p>
+
+<p><strong>4) Use variables, and name variables appropriately</strong></p>
+
+<p>A good example is colors; don’t hardcode color values in your classes.  And when assigning colors to a variable, take care to name the variable appropriately.</p>
+
+<p><code>@gray</code>, <code>@dark-gray</code>, <code>@extra-dark-gray</code>, <code>@super-extra-dark-gray</code>, and so on.. is unrealistic.  Use a number scheme instead.</p>
+
+<p><code>@gray-100</code>, <code>@gray-200</code>, <code>@gray-300</code>, …, <code>@gray-900</code>, this is a much better approach (and follows the font-weight standard).</p>
+
+<p>You could also do this for colors that you don’t want to explicitly name.  Example: <code>@primary-100</code>, <code>@primary-200</code>, <code>@primary-300</code>, and so on for your primary theme color.</p>
+
+<p><strong>5) CSS file organization</strong></p>
+
+<p>CSS files should be named according to component, not based on the page!</p>
+
+<p><u>Bad example:</u></p>
+<pre><code class="md">.
+├── styles
+|   ├── homePage.css
+|   ├── aboutPage.css
+|   ├── contactPage.css
+|   ├── ...
+</code></pre>
+
+<p><u>Good example:</u></p>
+<pre><code class="md">.
+├── styles
+|   ├── alerts.css
+|   ├── buttons.css
+|   ├── forms.css
+|   ├── ...
+</code></pre>
+
+<p>This will help enforce that reusable component based design that we’ve been talking about.  Organizing based on location makes it much harder to reuse that style in another part of the site.</p>
+
+<p><strong>6) Code Reviews</strong></p>
+
+<p>Mike finished off the talk with tips on how to be more successful as a team.</p>
+
+<p>Code reviews are a must, even for styles.  A few things this can help with:</p>
+
+<ul>
+  <li>Check that variables are used (appropriately).</li>
+  <li>Check syntax, and check that naming standards are used and code is consistent.</li>
+  <li>Check that components are reusable.</li>
+</ul>
+
+<p><strong>7) Style Guides</strong></p>
+
+<p>Documentation is normally not the most enjoyed part of a developer’s life, but it is crucial!</p>
+
+<p>In the case of module based design, it can clearly show the rest of your team the components that are available for use.</p>
+
+<p>There are plenty of tools that will help generate these style guides for you:</p>
+
+<ul>
+  <li><a href="http://warpspire.com/kss/">KSS</a></li>
+  <li><a href="http://patternlab.io/">Pattern Lab</a></li>
+  <li><a href="https://fbrctr.github.io/">Fabricator</a> - and here’s a <a href="http://fbrctr.github.io/demo/">demo</a> of a style guide</li>
+</ul>
+
+<p>He also mentions not to let this style guide die.  Keep it up-to-date and let it evolve!</p>
+
+<hr />
+
+<p>One final topic I want to discuss on this talk is <strong>testing</strong>.  I had a concern while hearing this talk that by putting styles into reused classes, testing could become a pain.  If you want to change the style of some text on the homepage, you go and change the style.  But then what if that style is reused, and some other page breaks?</p>
+
+<p>Apparently, I wasn’t the only one with that concern, as it was brought up during Q&amp;A.  Mike’s answer was two-fold.  First, he admitted that of course some regression testing will have to be done to ensure that the change isn’t breaking other parts of the site.  The other point he brought up is that the benefit of this module based design is that <em>components “play well” together</em>.  Components should be compatible with other components (without breaking).</p>
+
+<p>In other words, it shouldn’t be possible that changing a component’s style and testing it on the homepage would work, but would break on another part of the site.  This all relates back to his point about avoiding one-off changes as well, as you can better prevent odd edge cases that happen only on certain pages.</p>
+
+<p>So, take that with a grain of salt.  A perfect implementation of module based design wouldn’t introduce this sort of bug, but things don’t always execute perfectly, do they? ;)</p>
+
+<hr />
+
+<p>This was a very potent talk with a lot of content, but I hope I summarized out the core points on this one!</p>
+
+<h3 id="localization">Localization</h3>
+
+<p>I actually had no idea what this talk would be about, based on it’s title: <a href="http://html5devconf.com/speakers/leith_abdulla.html#session">How Automation Can Open Up Your Product to a Billion More Users*</a>.  The asterisk ended up signifying:</p>
+
+<blockquote>
+  <p>* if you localize all the languages …</p>
+</blockquote>
+
+<p>The full slide deck is available here: <a href="https://eleith.com/slides/automate-i18n/">https://eleith.com/slides/automate-i18n/</a></p>
+
+<p>Some of the core points I took out of this talk:</p>
+
+<p><strong>1) How to determine the user’s language</strong></p>
+
+<p>This can be difficult, and depends on the specific situation.  In general, use a combination of strategies:</p>
+
+<ul>
+  <li>User’s preference data (if the user is logged in).</li>
+  <li>The <code>Accept-Language</code> header in the request (this is based on browser preferences).</li>
+  <li>IP-based (using a service like <a href="https://www.maxmind.com">MaxMind</a>).</li>
+</ul>
+
+<p>Google was given as an example of a good experience.  You can travel to Japan, the site would load in Japanese, but Google would offer a message saying “we think you might prefer to read this in English.”</p>
+
+<p><strong>2) How to broadcast the language support</strong></p>
+
+<p>This is important to help ensure that user is given appropriate content.  It can also help search engines pick the right results.</p>
+
+<p>Use the HTML standard (<code>&lt;html lang="en"&gt;</code>) or use subdomains:</p>
+
+<ul>
+  <li>es.coursera.org</li>
+  <li>zh.coursera.org</li>
+  <li>pt.coursera.org</li>
+</ul>
+
+<p><strong>3) Translation concerns</strong></p>
+
+<p>There’s more to consider than simply translating words.  For example, the English word “back” could be translated to the meaning “previous”, or to the part of the human body.  Context is important.</p>
+
+<p>Format can also change.  For example, dates, times and numbers (like the thousands separator), may all need to be presented in different ways depending on the locale.</p>
+
+<p>Solving this depends on the importance of quality.  Automated translation services, like Google Translate, are improving over time.  But they still aren’t perfect.  If high quality translation content is necessary, it might be more appropriate to use a more manual process.</p>
+
+<p>Human translators can recognize context better.  You can use outsourcing sites like <a href="https://www.mturk.com/mturk/welcome">Amazon’s Mechanical Turk</a> for this.</p>
+
+<p><strong>4) Not all site content should be translated</strong></p>
+
+<p>Care needs to be taken to not simply translate the entire website.  Certain content, such as URLs or code snippets, should often not be translated.</p>
+
+<p>The approach suggested in this talk solved this by abstracting strings out.  Then, at the presentation level, strings were wrapped with a Javascript <code>_t(string)</code> function call that took care of the translation.  This forces the translation to be more explicit.</p>
+
+<p><em>Note: the <code>_t()</code> function is specific to the custom translation library Coursera created.  View the <a href="https://eleith.com/slides/automate-i18n/">slide deck</a> for more information on their approach.</em></p>
+
+<hr />
+
+<p>Localization is important on the internet.  Simply looking at English vs non-English speakers on the internet shows this importance.</p>
+
+<p><img src="/assets/images/html5devconf/english-vs-non-english.png" alt="English vs. non-English speakers" /></p>
+
+<h3 id="drunk-user-testing">Drunk User Testing</h3>
+
+<p>This was definitely one of the most fun talks of the day!  But before you get too excited - No, we didn’t get drunk for this one :(</p>
+
+<p>The idea behind this type of testing is that (1) your site is simple enough that a drunk user can use it, and (2) drunk users will give more honest feedback.</p>
+
+<p>There’s actually a website called <a href="http://theuserisdrunk.com/">theuserisdrunk.com</a>, where a UX professional says he will get drunk and test your website while recording the session and providing a full feedback document.</p>
+
+<p><a href="http://austinknight.com/drunk-speech-resources/">Austin Knight</a> was the presenter for this talk, and he works for <a href="http://www.hubspot.com/">HubSpot</a>.  HubSpot used this service on their homepage and got some valuable feedback.  The screencast video is recorded below - it’s actually quite an entertaining video if you have some time!</p>
+
+<iframe style="max-width:100%" width="420" height="315" src="https://www.youtube.com/embed/osr0rPUyAbY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Austin spent the rest of the talk discussing the possibility of user testing with sober users.</p>
+
+<h4 id="challenges">Challenges</h4>
+
+<p>There are challenges to consider when setting up user tests.  Often times during user testing, users will give opinions even if they wouldn’t normally have one.  They end up thinking of an opinion to give instead of fully using the product.  This is unnatural.  In addition, feedback can be skewed if questions are leading.</p>
+
+<h4 id="solutions">Solutions</h4>
+
+<p><strong>1) Segment your users</strong></p>
+
+<p>Ask “qualifying questions” that help you ensure that your users who you are testing are in fact your target audience.</p>
+
+<p><strong>2) Iterate the tests</strong></p>
+
+<p>Start with a pilot test that will “test the test.”  This will let you identify any flaws in the test before running it against actual users.</p>
+
+<p>Then run tests in iterations.  Each iteration really only needs 3-5 users, according to Austin.  Continue this iteration cycle.</p>
+
+<p><strong>3) Don’t lead the user</strong></p>
+
+<p>It is important to ask questions that don’t exactly match the implementation.</p>
+
+<p>Consider these two prompts.  Which is the better phrasing?</p>
+
+<ul>
+  <li>“Find the job application form and submit it”</li>
+  <li>“Find a job you like and apply for it”</li>
+</ul>
+
+<p>The first prompt leads the user by referring to specific implementation terminology (a “form”, a “submit” button).  Asking for behavior is preferred, and will help induce a more natural environment.</p>
+
+<p><strong>4) Create a culture of UX at your company</strong></p>
+
+<p>Everyone is a UX designer.  There should be a sense of ownership from everyone, and the mindset of “oh, it’s that guy’s fault, not mine” shouldn’t exist.</p>
+
+<hr />
+
+<p>By following these tips, it is possible to get valuable feedback from every user (not just drunk ones)!</p>
+
+
+</article>
+
+
+
+<section class="tags">
+	<strong>Tags:</strong> <a href="/tag/html">html</a>,&nbsp;<a href="/tag/css">css</a>,&nbsp;<a href="/tag/conference">conference</a>,&nbsp;<a href="/tag/notes">notes</a>,&nbsp;<a href="/tag/design">design</a>,&nbsp;<a href="/tag/advice">advice</a>
+</section>
+
+
+
+<section class="rss">
+	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+  
+    
+      <a href="//www.facebook.com/sharer.php?t=HTML5+Developer+Conference&amp;u=http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="http://twitter.com/share?text=HTML5+Developer+Conference&amp;url=http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//www.linkedin.com/shareArticle?mini=trueHTML5+Developer+Conference&amp;url=http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+  
+    
+      <a href="//plus.google.com/share?title=HTML5+Developer+Conference&amp;url=http://bcole.github.io/conferences/2015/10/21/html5-developer-conference.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+      	<i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</section>
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'bcole';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Brandon Cole</h3>
+
+    <div class="site-contact">
+
+    	<p><strong>Contact</strong></p>
+
+      <div class="left">
+      <ul class="social-media-list">
+      	<li>
+      		<a href="mailto:bncole333@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">bncole333@gmail.com</span>
+      		</a>
+      	</li>
+
+        
+        
+        
+        
+        <li>
+          <a href="https://github.com/bcole" title="Fork me on GitHub">
+            <i class="fa fa-github"></i>
+            <span class="username">bcole</span>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+      </div>
+
+      <div class="right">
+      <ul class="social-media-list">
+
+        
+      	
+      	
+        
+        
+      	
+      	
+        
+      	<li>
+          <a href="http://facebook.com/BNCole" title="Friend me on Facebook">
+            <i class="fa fa-facebook"></i>
+            <span class="username">BNCole</span>
+          </a>
+        </li>
+      	
+        
+      	
+      	
+      	
+      	
+        
+      	<li>
+          <a href="https://www.linkedin.com/pub/brandon-cole/23/902/111" title="Connect with me on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">Brandon Cole</span>
+          </a>
+        </li>
+      	
+        
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+      	
+
+      </ul>
+      </div>
+    </div>
+
+    <div class="site-signature">
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text"><i>"Muddy water is best cleared by leaving it alone."</i> - <a href="https://www.youtube.com/watch?v=emHAoQGoQic" target="_BLANK">Alan Watts</a>
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>
