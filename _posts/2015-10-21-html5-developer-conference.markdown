@@ -22,7 +22,7 @@ However, it is not enough to simply have a consistent UI.  It should also be mai
 
 He gave an example of an airline site which he enjoyed using.  The buttons and styles were consistent.  However, he looked into the source code and noticed that different classes were being used for titles that had the same exact styling.  This is bad!  It means that if a change wants to be made (ex: change the title font size), this has to be changed in every CSS class used by titles.  This violates the [DRY principle][dry] (don't repeat yourself!), and it's not maintainable!
 
-He ended with an poor example of an even worse site, where there wasn't even consistency.  Buttons looked different, forms had different styling, and so on.  This is an obvious no-no.
+He ended with an example of an even worse site, where there wasn't even consistency.  Buttons looked different, forms had different styling, and so on.  This is an obvious no-no.
 
 But back to the good design.  What should we do?
 
@@ -31,8 +31,6 @@ But back to the good design.  What should we do?
 Mike gave a *lot* of tips & tricks in this talk to keep in mind while designing your CSS and website.  I'll pull out a few that I especially thought were useful.
 
 **1) Use CSS classes, not IDs**
-
-Sure, there will be the exception to the rule, but in general - use classes, not IDs!
 
 Classes are reusable, and this approach helps promote a component based design and dissuades styling for "one-off's" (more on this later).
 
@@ -122,7 +120,7 @@ He also mentions not to let this style guide die.  Keep it up-to-date and let it
 
 One final topic I want to discuss on this talk is **testing**.  I had a concern while hearing this talk that by putting styles into reused classes, testing could become a pain.  If you want to change the style of some text on the homepage, you go and change the style.  But then what if that style is reused, and some other page breaks?
 
-Apparently, I wasn't the only one with that concern, as it was brought up during Q&A.  Mike's answer was two-fold.  First, he admitted that of course some regression testing will have to be done to ensure that the change isn't breaking other parts of the site.  The other point he brought up though is that the point of this module based design is that *components "play well" together*.  Components should be compatible with other components (without breaking).
+Apparently, I wasn't the only one with that concern, as it was brought up during Q&A.  Mike's answer was two-fold.  First, he admitted that of course some regression testing will have to be done to ensure that the change isn't breaking other parts of the site.  The other point he brought up is that the benefit of this module based design is that *components "play well" together*.  Components should be compatible with other components (without breaking).
 
 In other words, it shouldn't be possible that changing a component's style and testing it on the homepage would work, but would break on another part of the site.  This all relates back to his point about avoiding one-off changes as well, as you can better prevent odd edge cases that happen only on certain pages.
 
@@ -149,6 +147,8 @@ This can be difficult, and depends on the specific situation.  In general, use a
  - User's preference data (if the user is logged in).
  - The <code>Accept-Language</code> header in the request (this is based on browser preferences).
  - IP-based (using a service like [MaxMind][maxmind]).
+
+ Google was given as an example of a good experience.  You can travel to Japan, the site would load in Japanese, but Google would offer a message saying "we think you might prefer to read this in English."
 
 **2) How to broadcast the language support**
 
@@ -194,7 +194,7 @@ There's actually a website called [theuserisdrunk.com](http://theuserisdrunk.com
 
 [Austin Knight][austin] was the presenter for this talk, and he works for [HubSpot][hubspot].  HubSpot used this service on their homepage and got some valuable feedback.  The screencast video is recorded below - it's actually quite an entertaining video if you have some time!
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/osr0rPUyAbY" frameborder="0" allowfullscreen></iframe>
+<iframe style="max-width:100%" width="420" height="315" src="https://www.youtube.com/embed/osr0rPUyAbY" frameborder="0" allowfullscreen></iframe>
 
 
 Austin spent the rest of the talk discussing the possibility of user testing with sober users.
